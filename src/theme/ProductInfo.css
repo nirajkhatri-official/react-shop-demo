@@ -1,0 +1,99 @@
+.product-info-wrapper {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.3s;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.product-info-wrapper:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-info-image {
+  width: 80%;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.product-info-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.product-info-brand-category {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.product-info-price {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.product-info-min-order {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ff5722;
+  margin-top: 8px;
+}
+
+.discounted-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e53935;
+}
+
+.original-price {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #999;
+  font-weight: 500;
+}
+
+.product-info-stock-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-info-stock {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.in-stock {
+  color: #388e3c;
+}
+
+.low-stock {
+  color: #d32f2f;
+}
+
+.product-info-rating {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.product-info-rating span {
+  font-size: 12px;
+  color: #ffd700;
+}
