@@ -1,0 +1,36 @@
+.toggle-btn {
+  display: none;
+  padding: 10px;
+  background: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.product-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+  padding: 0px 20px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-drawer {
+    display: none;
+  }
+}

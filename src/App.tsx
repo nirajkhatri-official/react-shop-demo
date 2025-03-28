@@ -7,7 +7,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <div style={{ display: "flex", height: "100vh" }}>
-        {/* Left side: Product details (or placeholder) */}
         <div style={{ flex: 1, overflowY: "auto" }}>
           <Routes>
             <Route path="/product/:id" element={<ProductDetails />} />
@@ -22,15 +21,7 @@ const App: React.FC = () => {
           </Routes>
         </div>
 
-        {/* Right side: Product list */}
-        <div
-          style={{
-            width: "300px",
-            borderLeft: "1px solid #ccc",
-            overflowY: "auto",
-            padding: "0px 20px",
-          }}
-        >
+        <div className="right-side-panel">
           <ProductList />
         </div>
       </div>

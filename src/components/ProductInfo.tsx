@@ -3,7 +3,13 @@ import { useNavigate } from "react-router-dom";
 import "../theme/ProductInfo.css";
 import getDiscountedPrice from "../utils/getDiscountedPrice";
 
-const ProductInfo = ({ data }: { data: Product }) => {
+const ProductInfo = ({
+  data,
+  toggleDrawer,
+}: {
+  data: Product;
+  toggleDrawer?: () => void;
+}) => {
   const navigate = useNavigate();
   const discountedPrice = getDiscountedPrice(
     data?.price,
@@ -13,7 +19,10 @@ const ProductInfo = ({ data }: { data: Product }) => {
   return (
     <div
       className="product-info-wrapper"
-      onClick={() => navigate(`/product/${data?.id}`)}
+      onClick={() => {
+        navigate(`/product/${data?.id}`);
+        toggleDrawer && toggleDrawer();
+      }}
     >
       <img
         className="product-info-image"

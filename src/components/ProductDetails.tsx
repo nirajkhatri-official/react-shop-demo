@@ -5,6 +5,7 @@ import getDiscountedPrice from "../utils/getDiscountedPrice";
 import ProductReviewList from "./ProductReviewList";
 import Loading from "./Loading";
 import ApiError from "./ApiError";
+import ProductListDrawer from "./ProductListDrawer";
 
 const ProductDetails: React.FC = () => {
   const { loading, error, data } = useFetchProductDetail();
@@ -16,7 +17,10 @@ const ProductDetails: React.FC = () => {
 
   return (
     <div className="container">
-      <h2 className="header">Product Details</h2>
+      <div className="header-wrapper">
+        <h2 className="header">Product Details</h2>
+        <ProductListDrawer />
+      </div>
       {loading && <Loading />}
       {error && <ApiError />}
       {data && (

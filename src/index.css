@@ -1,3 +1,17 @@
-body {
+body,
+h2 {
   margin: 0;
+}
+
+.right-side-panel {
+  width: 300px;
+  border-left: 1px solid #ccc;
+  overflow-y: auto;
+  padding: 0px 20px;
+}
+
+@media (max-width: 768px) {
+  .right-side-panel {
+    display: none;
+  }
 }
